@@ -65,7 +65,7 @@ export default class AdminLogin extends React.Component {
                     <em htmlFor="password">{this.state.error}</em>
                     <div className="input-group">
                         <input className="form-control" type="password" placeholder="Password (e.g., 123456)" ref="password" onKeyPress={this.handleLoginKeyPress}/>
-                        <button className="btn" onClick={this.handleAuth}>Admin</button>
+                        <button className="btn" onClick={this.handleAuth} >Admin</button>
                     </div>
                 </div>
             );

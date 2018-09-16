@@ -1,5 +1,8 @@
 import React from 'react';
 import firebase from 'firebase';
+// import { Route, Switch } from 'react-router-dom';
+// import SearchPage from '.SearchPage';
+
 import ImageGallery from './components/gallery/ImageGallery';
 // import logo from './images/logo.png';
 
@@ -31,11 +34,21 @@ export default class App extends React.Component {
         {/* <header className={classNames.appHeader}>
           <img src={ logo } className={classNames.appLogo} alt="logo" /> */}
           <h1 className={classNames.appTitle}>Khaled & Onneil & Justine</h1>
+          {/* <Switch>
+              <Route path="/search" component={SearchPage} />
+            </Switch> */}
+          {/* <Link to="/search">
+                            <Button className="btn btn-lg btn-secondary">Go to Search</Button>
+                        </Link> */}
         {/* </header> */}
         <div className={classNames.appIntro}>
           <ImageGallery user={ this.state.user } />
         </div>
       </div>
+      
+      
     );
+
   }
 }
+
