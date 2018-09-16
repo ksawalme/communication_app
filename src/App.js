@@ -1,10 +1,10 @@
 import React from 'react';
 import firebase from 'firebase';
-// import { Route, Switch } from 'react-router-dom';
-// import SearchPage from '.SearchPage';
+import { Route, Switch } from 'react-router-dom';
+import SearchPage from './components/SearchPage';
 
 import ImageGallery from './components/gallery/ImageGallery';
-// import logo from './images/logo.png';
+import logo from './components/images/logo.jpg';
 
 const classNames = require('./App.css');
 
@@ -30,25 +30,33 @@ export default class App extends React.Component {
 
   render() {
     return (
+
       <div className={classNames.app}>
-        {/* <header className={classNames.appHeader}>
-          <img src={ logo } className={classNames.appLogo} alt="logo" /> */}
+        <header className={classNames.appHeader}>
+          <img src={ logo } className={classNames.appLogo} alt="logo" />
           <h1 className={classNames.appTitle}>Khaled & Onneil & Justine</h1>
-          {/* <Switch>
-              <Route path="/search" component={SearchPage} />
-            </Switch> */}
+          </header>
+
           {/* <Link to="/search">
                             <Button className="btn btn-lg btn-secondary">Go to Search</Button>
                         </Link> */}
         {/* </header> */}
+        
         <div className={classNames.appIntro}>
           <ImageGallery user={ this.state.user } />
+          
         </div>
       </div>
-      
+
       
     );
 
   }
 }
 
+{
+  
+  /* <Switch>
+<Route exact path="/" component={ImageGallery} />
+<Route path="/search" component={SearchPage} />
+  </Switch> */}
