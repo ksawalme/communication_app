@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-// import firebase from 'firebase/app';
+import ImageUpload  from './firebase/ImageUpload';
 
-ReactDOM.render(<ImageUpload/>, document.getElementById('root'));
+
+ReactDOM.render(<ImageUpload />, document.getElementById('root'));
 registerServiceWorker();
 
  

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import {storage} from '..firebase';
+import {storage} from '../firebase';
 
 class ImageUpload extends Component {
    constructor(props){
        super(props);
        this.state={
            image: null,
-           url: href=""
-           
-       }
+           url:''
+           }  
        this.handleImage=this.handleImage.bind(this);
        this.uploadImage=this.uploadImage.bind(this);
    }
@@ -23,7 +22,7 @@ uploadImage=()=> {
 const {image}= this.state;
 const uploadTask=storage.ref(`images/${image.name}`).put(image);
 uploadTask.on('state_changed',
-(progress) =>{
+(snapshot) =>{
 // progress function
 },
 
@@ -34,7 +33,7 @@ uploadTask.on('state_changed',
 
     () =>{
         // complete function
-        storage.ref('images').child('image.name').getDownloadURL().then(url => {
+        storage.ref('images').child(image.name).getDownloadURL().then(url => {
             console.log(url);
             this.setState({url});
         })
@@ -47,22 +46,22 @@ const style={
     height:"100vh",
     display:"flex",
     flexDirection:"column",
-    // padding: "30px",
+padding: "30px",
 alignItems:"center",
-justifyContent:"center"
+justifyContent:"center",
+margin:"80px"
     };
   return (
-       <div style= {style} className="App">
+       <div style= {style} className="imageUpload">
       <h1>Home</h1>
          
-    <a href="https://console.firebase.google.com/#">
+    {/* <a href="https://console.firebase.google.com/#"> */}
     <input type="file"  onChange={this.handleImage}/>
-    <button dbClick={this.uploadImage}>uploadImage</button> 
+    <button onClick={this.uploadImage}>uploadImage</button> 
     <br/>
-
-      <img src={this.state.href="https://console.firebase.google.com/#" || "https://via.placeholder.com/95x95"} alt="uploadImages"/>
-      <div id="img-caption">spoon</div>
-      </a>
+<img src={this.state.url || "https://via.placeholder.com/95x95"} alt="uploadImages"/>
+     
+      {/* </a> */}
   
         </div>
       );

@@ -17,7 +17,9 @@ class App extends Component {
       <School/>
       <Leisure/>
       <General/> */}
-      <ImageUpload/>
+      <ImageUpload />
+     
+
         {/* <header className="App-header">
           <img src={Logo2} className="App-logo" alt="logo" />
           <h1 className="App-title">Makaton Communication App</h1>

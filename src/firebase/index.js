@@ -1,17 +1,17 @@
-
+import firebase from 'firebase/app';
 import 'firebase/storage';
-import ImageUpload  from './ImageUpload';
+// import ImageUpload  from './firebase/ImageUpload';
 
 
 
 // Initialize Firebase
 var config = {
-    apiKey: "<API_KEY>",
-    authDomain: "<PROJECT_ID>.firebaseapp.com",
-    databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
-    projectId: "<PROJECT_ID>",
+    apiKey: "AIzaSyDgdp6tYpq1etxFCnpIetbUO5YZ6dntUEo",
+    authDomain: "makatonapp.firebaseapp.com",
+    databaseURL: "https://makatonapp.firebaseio.com",
+    projectId: "makatonapp",
     storageBucket: "makatonapp.appspot.com",
-    messagingSenderId: "<SENDER_ID>",
+    messagingSenderId: "137161735861"
   };
   firebase.initializeApp(config);
   
