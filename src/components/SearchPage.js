@@ -45,30 +45,37 @@ class SearchPage extends Component {
         }
     }
     render() {
-        if (this.state.error) {
-            return (
-                <h2>
-                 error: <span>{this.state.error}</span>
-                </h2>
-            );
-        } else {
-            if (this.state.isLoading) {
-                return <Dimmer active>
-                    <Loader size="massive" active inline="centered" content="Loading" />
-                </Dimmer>;
-            } else {
-                return (
-                    <div>
-                        <HeaderCarusel />
-                        <Switch>
-                            <Route exact path="/search/" render={props => <DataTable data={this.state.fakeAlbums} {...props} />} />
-                            <Route path="/search/:id" component={DiskTable} />} />
-                        </Switch>
-                        <FooterMedia />
-                    </div>
-                )
-            }
-        }
+        return(
+        <div>
+            <h1> Search Page </h1>
+        </div>
+
+        )
+
+        // if (this.state.error) {
+        //     return (
+        //         <h2>
+        //          error: <span>{this.state.error}</span>
+        //         </h2>
+        //     );
+        // } else {
+        //     if (this.state.isLoading) {
+        //         return <Dimmer active>
+        //             <Loader size="massive" active inline="centered" content="Loading" />
+        //         </Dimmer>;
+        //     } else {
+        //         return (
+        //             <div>
+        //                 <HeaderCarusel />
+        //                 <Switch>
+        //                     <Route exact path="/search/" render={props => <DataTable data={this.state.fakeAlbums} {...props} />} />
+        //                     <Route path="/search/:id" component={DiskTable} />} />
+        //                 </Switch>
+        //                 <FooterMedia />
+        //             </div>
+        //         )
+        //     }
+        // }
     }
 }
 export default SearchPage

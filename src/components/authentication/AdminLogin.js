@@ -2,6 +2,8 @@ import React from 'react';
 import firebase from 'firebase';
 import keydown from 'react-keydown';
 import admin from '../images/admin.png';
+// import { Link } from "react-router-dom";
+
 const classNames = require('./AdminLogin.css');
 
 export default class AdminLogin extends React.Component {
@@ -57,6 +59,7 @@ export default class AdminLogin extends React.Component {
                     <img className={classNames.urlPhoto} src={admin} alt={this.props.user.email} />
                     <span>Welcome Khalde&Onneil&justine</span>
                     <button className="btn btn-default" onClick={this.handleLogout}>Log out</button>
+
                 </div>
             );
         } else {
