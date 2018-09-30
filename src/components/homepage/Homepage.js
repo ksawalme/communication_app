@@ -5,13 +5,13 @@ import generalCategory from "../images/generalCategory.jpg";
 import leisureCategory from "../images/leisureCategory.jpg";
 import homeCategory from "../images/homeCategory.jpg";
 import schoolCategory from "../images/schoolCategory.jpg";
-
+import classNames from './Homepage.css';
 class Homepage extends Component {
   render() {
     return (
-      <section className="homepage">
+      <section className={classNames.section}>
         <div className="homepage-central-image">
-          <img src={kidsImage} alt="kids sitting together" />
+          <img src={kidsImage} className={classNames.kidsimage} alt="kids sitting together" />
         </div>
         <nav className="homepage-navigation-buttons">
           <div className="homepage-navigation-button">

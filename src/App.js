@@ -2,19 +2,19 @@
 import React from "react";
 import firebase from "firebase";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
-
 // components
 import ImageGallery from "./components/gallery/ImageGallery";
 import Homepage from "./components/homepage/Homepage";
 
 // style
 import logo from "./components/images/appLogo.jpg";
+import AdminLogin from "./components/authentication/AdminLogin";
 const classNames = require("./App.css");
 
 const SwitchComponent = props => (
   <Switch>
     <Route exact path="/" component={ImageGallery} />
-    <Route path="/search" component={SearchPage} />
+    <Route path="/admin" component={AdminLogin} />
   </Switch>
 );
 
