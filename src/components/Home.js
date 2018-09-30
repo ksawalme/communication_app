@@ -4,7 +4,6 @@ const Home = () => {
 
     return (
       <div>
-         {/* {/* {/* images */}
         {HomeImages.map((name) => (
           <p>{name}</p>
           ))} 
