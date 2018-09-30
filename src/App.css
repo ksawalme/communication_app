@@ -14,15 +14,17 @@
   color: white;
 }
 
- .App-title {
+.appTitle {
   font-size: 1.5em;
  }
 
- .App-intro {
+.appIntro {
   font-size: large;
- }
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 
- @keyframes App-logo-spin {
+@keyframes appLogoSpin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-} 
+}
