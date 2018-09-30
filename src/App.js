@@ -5,10 +5,10 @@ import { Route, Switch, BrowserRouter } from "react-router-dom";
 
 // components
 import ImageGallery from "./components/gallery/ImageGallery";
-import Homepage from "./components/Homepage";
+import Homepage from "./components/homepage/Homepage";
 
 // style
-import logo from "./images/appLogo.jpg";
+import logo from "./components/images/appLogo.jpg";
 const classNames = require("./App.css");
 
 const SwitchComponent = props => (
