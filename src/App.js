@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import Makaton from './;
 // import Logo2 from './Logo2.jpg';
 // import './App.css';
 // import Home from './components/Home';
@@ -17,6 +18,7 @@ class App extends Component {
       <School/>
       <Leisure/>
       <General/> */}
+      <Makaton />
       <ImageUpload />
      
 
