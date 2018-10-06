@@ -28,9 +28,7 @@ module.exports = {
     inline: true, // Enable watch and live reload
     host: 'localhost',
     port: 9000,
-    stats: 'errors-only',
-    historyApiFallback: true,
-
+    stats: 'errors-only'
   },
   module: {
     loaders: [

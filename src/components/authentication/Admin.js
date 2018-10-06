@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import firebase from "firebase";
-import "./styles/Admin.css";
+
 
 let config = {
   apiKey: "AIzaSyA0CjkXYKX3FGW_HQYFcATN1_U2OF80dWM",
@@ -14,14 +14,18 @@ let config = {
 firebase.initializeApp(config);
 
 class Authen extends Component {
-  state = {
-    email: "",
-    password: "",
-    err: "",
-    isLoggedIn: false
-  };
-
-  login = () => {
+ 
+  constructor() {
+    super();
+    this.state = {
+      email: "",
+      password: "",
+      err: "",
+      isLoggedIn: false
+  
+    };
+  }
+  login() {
     const email = this.state.email;
     const password = this.state.password;
     const auth = firebase.auth();
@@ -45,7 +49,7 @@ class Authen extends Component {
     });
   };
 
-  signup = () => {
+  signup(){
     const email = this.state.email;
     const password = this.state.password;
     const auth = firebase.auth();
@@ -68,7 +72,7 @@ class Authen extends Component {
       });
   };
 
-  logout = () => {
+  logout(){
     let promise = firebase.auth().signOut();
     promise
       .then(() => {
@@ -125,6 +129,13 @@ class Authen extends Component {
                     onClick={this.login}
                   >
                     Login
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-def btn-block btn-dark signup"
+                    onClick={this.signup}
+                  >
+                    signup
                   </button>
                 </div>
               </form>
