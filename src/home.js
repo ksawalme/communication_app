@@ -2,7 +2,6 @@
 // import {  Link } from "react-router-dom";
 import React from "react";
 import firebase from "firebase";
-import { Route, Switch, BrowserRouter } from "react-router-dom";
 // components
 import ImageGallery from "./components/gallery/ImageGallery";
 // style
@@ -10,18 +9,13 @@ import kid from "./components/images/kid.png";
 import { Link } from "react-router-dom";
 import { Jumbotron, Button } from "react-bootstrap";
 
-const classNames = require("./input.css");
+const classNames = require("./home.css");
 
 
 
-// const SearchBar = props => (
-//   <div>
-//     <input type="search" placeholder="Search image" />
-//     <button onClick={this.handleClick}>Go</button>
-//   </div>
-// );
 
-export default class input extends React.Component {
+
+export default class home extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -47,7 +41,7 @@ export default class input extends React.Component {
 
 
               <h1 className={classNames.appTitle}>
-                Makaton admin
+                Makaton home
               </h1>
             </header>
             <Link to="/homepage">

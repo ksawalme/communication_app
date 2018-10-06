@@ -4,6 +4,7 @@ import { Jumbotron, Button } from "react-bootstrap";
 // import './HomePage.css';
 const classNames = require("./HomePage.css");
 import kid from "./components/images/kid.png";
+
 import general from "./components/images/general.png";
 import leisure from "./components/images/leisure.jpg";
 import home from "./components/images/home.jpg";
@@ -34,9 +35,10 @@ export default class HomePage extends React.Component {
         {/* <div> */}
             {/* <div className={classNames.nav}> */}
 
-                    <Link to="/home">
-                        <Button className="btn">home</Button>
+                    <Link to="/homepage">
+                        <Button className="btn">homepage</Button>
                     </Link>
+                    
                     <Link to="/input">
                         <Button className="btn">input</Button>
                     </Link>
@@ -52,11 +54,22 @@ export default class HomePage extends React.Component {
         </div>
         <div className={classNames.app}>
 
+        <a href="general">
         <img src={general} className={classNames.cet} alt="general" />
-          <img src={leisure} className={classNames.cet} alt="leisure" />
-        <img src={home} className={classNames.cet} alt="home" />
+       </a>
 
+       <a href="leisure">
+          <img src={leisure} className={classNames.cet} alt="leisure" />
+          </a>
+
+          <a href="home">
+          <img src={home} className={classNames.cet} alt="home" />
+          </a>
+
+          <a href="school">
         <img src={school} className={classNames.cet} alt="school" />
+        </a>
+
       </div>
     </div>
     </div>

@@ -34,11 +34,11 @@ export default class extends React.Component {
                 {/* <img src={logo} className={classNames.appLogo} alt="logo" /> */}
     
                   <h1 className={classNames.appTitle}>
-                    Makaton Communication WebApp
+                    Makaton Search
                   </h1>
                 </header>
-                <Link to="/home">
-                            <Button className="btn">home</Button>
+                <Link to="/homepage">
+                            <Button className="btn">homepage</Button>
                         </Link>
                         <Link to="/input">
                             <Button className="btn">input</Button>

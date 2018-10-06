@@ -5,12 +5,13 @@ import firebase from "firebase";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 // components
 import ImageGallery from "./components/gallery/ImageGallery";
+// import Homepage from "./components/homepage/Homepage";
 // style
 import kid from "./components/images/kid.png";
 import { Link } from "react-router-dom";
 import { Jumbotron, Button } from "react-bootstrap";
 
-const classNames = require("./input.css");
+const classNames = require("./leisure.css");
 
 
 
@@ -21,7 +22,7 @@ const classNames = require("./input.css");
 //   </div>
 // );
 
-export default class input extends React.Component {
+export default class leisure extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -47,7 +48,7 @@ export default class input extends React.Component {
 
 
               <h1 className={classNames.appTitle}>
-                Makaton admin
+                Makaton leisure
               </h1>
             </header>
             <Link to="/homepage">
