@@ -1,10 +1,10 @@
 import React from 'react';
 import firebase from "firebase";
+import ImageGallery from "./components/gallery/ImageGallery";
 
 import kid from "./components/images/kid.png";
 import { Link } from "react-router-dom";
 import { Jumbotron, Button } from "react-bootstrap";
-
 const classNames = require("./search.css");
 
 export default class extends React.Component {
@@ -15,7 +15,10 @@ export default class extends React.Component {
           images: []
         };
       }
-    
+      onInputChange(term) {
+        this.props.onTermChange(term);
+    }
+
       componentWillMount() {
         firebase.auth().onAuthStateChanged(user => {
           this.setState({ user });
@@ -34,7 +37,7 @@ export default class extends React.Component {
                 {/* <img src={logo} className={classNames.appLogo} alt="logo" /> */}
     
                   <h1 className={classNames.appTitle}>
-                    Makaton Search
+                    Makaton earch
                   </h1>
                 </header>
                 <Link to="/homepage">
@@ -46,7 +49,14 @@ export default class extends React.Component {
                         <Link to="/search">
                             <Button className="btn">search</Button>
                         </Link>
-                       
+                        <div className="search">
+                <input placeholder="Enter text to search for gifs!" onChange={event => this.onInputChange(event.target.value)} />
+            </div>
+                        <div className={classNames.appIntro}>
+              <ImageGallery user={this.state.user} />
+            </div>
+               
+ 
               </div>
             </div>
           </div>
