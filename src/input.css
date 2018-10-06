@@ -1,0 +1,35 @@
+.App {
+    text-align: center;
+  } 
+   
+  .App-logo {
+     height: 80px;
+  }  
+  
+   .appHeader {
+    background-color: rgb(94, 85, 85);
+    height: 30px;
+    color: white;
+
+
+  }
+  
+  .appTitle {
+    font-size: 1.5em;
+   }
+  
+  .appIntro {
+    font-size: large;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .kid {
+    width: 85%;
+    height: 350px;
+
+  }
+  @keyframes appLogoSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  

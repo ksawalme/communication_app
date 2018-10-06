@@ -1,64 +1,37 @@
-// libraries
-import React from "react";
-import firebase from "firebase";
-import { Route, Switch, BrowserRouter } from "react-router-dom";
-// components
-import ImageGallery from "./components/gallery/ImageGallery";
-import Homepage from "./components/homepage/Homepage";
+import React, { Component } from 'react';
+import { Route, Switch, withRouter,BrowserRouter } from 'react-router-dom';
 
-// style
-import logo from "./components/images/appLogo.jpg";
-import AdminLogin from "./components/authentication/AdminLogin";
-const classNames = require("./App.css");
+import './App.css';
+import input from "./input";
+import Homepage from "./HomePage";
+import search from './search';
+import school from './school';
+import general from './general';
+import home from './home';
+import leisure from './leisure';
 
-const SwitchComponent = props => (
-  <Switch>
-    <Route exact path="/" component={ImageGallery} />
-    <Route path="/admin" component={AdminLogin} />
-  </Switch>
-);
-
-const SearchBar = props => (
-  <div>
-    <input type="search" placeholder="Search image" />
-    <button onClick={this.handleClick}>Go</button>
-  </div>
-);
-
-export default class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      user: null,
-      images: []
-    };
-  }
-
-  componentWillMount() {
-    firebase.auth().onAuthStateChanged(user => {
-      this.setState({ user });
-    });
-  }
-
+class App extends Component {
   render() {
     return (
-      <div className="app">
-        <div className="content">
-          <div className={classNames.app}>
-            <header className={classNames.appHeader}>
-              <img src={logo} className={classNames.appLogo} alt="logo" />
-              <h1 className={classNames.appTitle}>
-                Makaton Communication WebApp
-              </h1>
-            </header>
-            <Homepage />
-            {/* <SearchBar />
-            <div className={classNames.appIntro}>
-              <ImageGallery user={this.state.user} />
-            </div> */}
-          </div>
-        </div>
-      </div>
-    );
-  }
+
+<BrowserRouter>
+  <Switch>
+    <Route exact path="/" component={Homepage} />
+
+    <Route path="/input" component={input} />
+    <Route path="/homepage" component={Homepage} />
+    <Route path="/search" component={search} />
+    
+    <Route path="/school" component={school} />
+    <Route path="/general" component={general} />
+    <Route path="/home" component={home} />
+    <Route path="/leisure" component={leisure} />
+
+  </Switch>
+</BrowserRouter>
+
+
+);
 }
+}
+export default withRouter(App);

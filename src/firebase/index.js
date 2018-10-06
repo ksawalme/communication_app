@@ -6,12 +6,12 @@ import 'firebase/storage';
 
 // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyDgdp6tYpq1etxFCnpIetbUO5YZ6dntUEo",
-    authDomain: "makatonapp.firebaseapp.com",
-    databaseURL: "https://makatonapp.firebaseio.com",
-    projectId: "makatonapp",
-    storageBucket: "makatonapp.appspot.com",
-    messagingSenderId: "137161735861"
+  apiKey: "AIzaSyA0CjkXYKX3FGW_HQYFcATN1_U2OF80dWM",
+  authDomain: "communication-994db.firebaseapp.com",
+  databaseURL: "https://communication-994db.firebaseio.com",
+  projectId: "communication-994db",
+  storageBucket: "communication-994db.appspot.com",
+  messagingSenderId: "680453452319"
   };
   firebase.initializeApp(config);
   
