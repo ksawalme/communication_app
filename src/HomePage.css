@@ -4,16 +4,6 @@
   justify-content: center;
   align-items:center
 }
-.welcomebg .jumbotron {
-    font-family: 'Prata', serif;
-    /* background-color: black; */
-    text-align: center;
-    opacity: .9;
-    background: rgb(94, 85, 85); 
-    color:#f1f1f1;
-    width:100%;
-    margin:auto;
-  }
   .welcomebg .jumbotron p {
     color:white;
     text-shadow: 0 0 10px;
